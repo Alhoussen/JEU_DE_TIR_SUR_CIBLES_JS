@@ -1,5 +1,5 @@
-Nom : [Votre Nom]
-Prénom : [Votre Prénom]
+Nom : TRAORE
+Prénom : ALHOUSSEN
 
 ================================================================================
 MINI-PROJET JAVASCRIPT 2018 - JEU DE TIR SUR CIBLES
@@ -103,7 +103,7 @@ FONCTIONNALITÉS OPTIONNELLES
 
 [✗] Jeu avec système de points
     NON RÉALISÉ
-    Cette fonctionnalité n'a pas été implémentée.
+    Cette fonctionnalité n'a pas été implémentée 
 
 --------------------------------------------------------------------------------
 AMÉLIORATIONS SUPPLÉMENTAIRES
