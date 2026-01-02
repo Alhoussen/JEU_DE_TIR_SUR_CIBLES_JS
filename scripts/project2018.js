@@ -1,5 +1,5 @@
 /**
- * Mini-Projet JavaScript 2018 - Jeu de Tir sur Cibles
+ * Mini-Projet JavaScript - Jeu de Tir sur Cibles
  * 
  * Ce fichier contient toute la logique du jeu de tir sur cibles.
  * Le joueur doit cliquer sur des cibles qui apparaissent aléatoirement
