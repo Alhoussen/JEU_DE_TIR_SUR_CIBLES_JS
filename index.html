@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Tir sur Cibles - Mini-Projet JavaScript</title>
+    <meta name="description" content="Jeu interactif de tir sur cibles avec chronomètre">
+    <link rel="stylesheet" href="style/style-project2018.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Jeu de Tir sur Cibles</h1>
+
+        <!-- Bouton pour créer une seule cible -->
+        <div class="single-target-section">
+            <button id="btn-single-target" class="btn btn-secondary">Une cible</button>
+        </div>
+
+        <!-- Zone de jeu (terrain) -->
+        <div id="terrain"></div>
+
+        <!-- Zone de contrôle du jeu -->
+        <div class="control-panel">
+            <div class="game-controls">
+                <div class="control-group">
+                    <label for="target-count">Nombre de cibles :</label>
+                    <input type="number" id="target-count" min="1" max="50" value="10">
+                </div>
+
+                <div class="control-group">
+                    <label for="difficulty">Difficulté :</label>
+                    <select id="difficulty">
+                        <option value="easy">Facile</option>
+                        <option value="medium" selected>Moyen</option>
+                        <option value="hard">Difficile</option>
+                    </select>
+                </div>
+
+                <button id="btn-start" class="btn btn-primary">Démarrer</button>
+            </div>
+
+            <div class="game-info">
+                <div class="info-item">
+                    <span class="info-label">Cibles restantes :</span>
+                    <span id="remaining-count" class="info-value">0</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">Chronomètre :</span>
+                    <div id="chrono" class="chrono-display">
+                        <span id="chrono-minutes">00</span>:<span id="chrono-seconds">00</span>:<span
+                            id="chrono-tenths">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hall of Fame -->
+        <div class="hall-of-fame">
+            <h2>🏆 Hall of Fame</h2>
+            <div id="scores-container">
+                <p class="no-scores">Aucun score enregistré. Jouez pour établir un record !</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal pour le nom du joueur -->
+    <div id="name-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <h3>🎉 Félicitations !</h3>
+            <p id="final-time-modal"></p>
+            <p>Entrez votre nom pour le Hall of Fame :</p>
+            <input type="text" id="player-name-input" placeholder="Joueur" maxlength="30">
+            <div class="modal-buttons">
+                <button class="btn btn-primary" id="submit-score-btn">Enregistrer</button>
+                <button class="btn btn-secondary" id="cancel-score-btn">Annuler</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/project2018.js"></script>
+</body>
+
+</html>
