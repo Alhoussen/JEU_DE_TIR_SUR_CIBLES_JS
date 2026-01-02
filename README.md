@@ -1,4 +1,4 @@
-# Mini-Projet JavaScript 2018 - Jeu de Tir sur Cibles
+# Mini-Projet JavaScript - Jeu de Tir sur Cibles
 
 Ce fichier décrit l'état de réalisation du projet et les fonctionnalités implémentées pour le jeu de tir sur cibles.
 
