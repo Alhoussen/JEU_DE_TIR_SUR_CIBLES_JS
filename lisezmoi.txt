@@ -1,0 +1,193 @@
+Nom : [Votre Nom]
+Prénom : [Votre Prénom]
+
+================================================================================
+MINI-PROJET JAVASCRIPT 2018 - JEU DE TIR SUR CIBLES
+================================================================================
+
+Ce fichier décrit l'état de réalisation du projet et les fonctionnalités
+implémentées.
+
+--------------------------------------------------------------------------------
+FONCTIONNALITÉS DE BASE
+--------------------------------------------------------------------------------
+
+[✓] Question 1 : Étude du code HTML
+    Le code HTML a été étudié et compris. La structure comprend :
+    - Un terrain de jeu (#terrain)
+    - Un bouton "Une cible" (#btn-single-target)
+    - Une zone de contrôle avec champ numérique et bouton "Démarrer"
+    - Un affichage du nombre de cibles restantes (#remaining-count)
+    - Un chronomètre (#chrono avec #chrono-minutes, #chrono-seconds, #chrono-tenths)
+
+[✓] Question 2 : Gestion du bouton "Une cible"
+    RÉALISÉ COMPLÈTEMENT
+    - Création d'un élément cible avec la classe 'target'
+    - Positionnement aléatoire dans le terrain (fonction positionTarget)
+    - Ajout comme enfant de #terrain (fonction addTargetToField)
+    - Gestion du clic avec effet visuel (classe 'hit')
+    - Disparition après 1 seconde (setTimeout)
+    
+    Fonctions implémentées :
+    - createTarget() : crée un élément div.target
+    - positionTarget(target) : positionne aléatoirement la cible
+    - addTargetToField(target) : ajoute la cible au terrain
+    - handleTargetClick(event) : gère le clic sur la cible
+
+[✓] Question 3 : Gestion du chronomètre
+    RÉALISÉ COMPLÈTEMENT
+    - Démarrage du chronomètre avec setInterval (100ms)
+    - Incrémentation de la variable globale 'time'
+    - Affichage au format MM:SS:D (minutes:secondes:dixièmes)
+    - Arrêt et réinitialisation du chronomètre
+    
+    Fonctions implémentées :
+    - startChrono() : démarre le timer
+    - stopChrono() : arrête le timer
+    - resetChrono() : remet à zéro
+    - updateChronoDisplay() : met à jour l'affichage
+
+[✓] Question 4 : Déroulement du jeu
+    RÉALISÉ COMPLÈTEMENT
+    - Bouton "Démarrer" fonctionnel
+    - Suppression des cibles existantes au début
+    - Réinitialisation du chronomètre
+    - Création du nombre de cibles demandé
+    - Mise à jour du compteur de cibles restantes
+    - Détection de la fin du jeu (toutes les cibles détruites)
+    - Arrêt du chronomètre à la fin
+    
+    Fonctions implémentées :
+    - startGame() : démarre une nouvelle partie
+    - endGame() : termine le jeu
+    - updateRemainingCount() : met à jour le compteur
+    - clearAllTargets() : supprime toutes les cibles
+
+--------------------------------------------------------------------------------
+FONCTIONNALITÉS OPTIONNELLES
+--------------------------------------------------------------------------------
+
+[✓] Niveaux de difficulté
+    RÉALISÉ COMPLÈTEMENT
+    - Trois niveaux : Facile, Moyen, Difficile
+    - Ajustement de la taille du terrain selon la difficulté
+    - Ajustement de la taille des cibles selon la difficulté
+    - Sélecteur dans l'interface pour choisir le niveau
+    
+    Dimensions :
+    - Facile : terrain 900x550px, cibles 70x70px
+    - Moyen : terrain 800x500px, cibles 60x60px
+    - Difficile : terrain 700x450px, cibles 45x45px
+    
+    Fonction implémentée :
+    - changeDifficulty() : change le niveau de difficulté
+
+[✓] Hall of Fame avec localStorage
+    RÉALISÉ COMPLÈTEMENT
+    - Sauvegarde des meilleurs scores dans localStorage
+    - Affichage des 10 meilleurs temps
+    - Tri par nombre de cibles puis par temps
+    - Demande du nom du joueur à la fin de la partie
+    - Affichage avec médailles pour le top 3
+    - Indication du niveau de difficulté pour chaque score
+    - Persistance des données (scores conservés après rechargement)
+    
+    Fonctions implémentées :
+    - saveScore(playerName, targetCount, time, difficulty) : sauvegarde un score
+    - loadScores() : charge les scores depuis localStorage
+    - updateHallOfFame() : met à jour l'affichage du Hall of Fame
+
+[✗] Cibles qui disparaissent automatiquement
+    NON RÉALISÉ
+    Cette fonctionnalité n'a pas été implémentée.
+
+[✗] Jeu avec système de points
+    NON RÉALISÉ
+    Cette fonctionnalité n'a pas été implémentée.
+
+--------------------------------------------------------------------------------
+AMÉLIORATIONS SUPPLÉMENTAIRES
+--------------------------------------------------------------------------------
+
+[✓] Design moderne et attrayant
+    - Interface avec thème sombre élégant
+    - Dégradés de couleurs (violet, rose)
+    - Animations fluides (apparition, disparition, hover)
+    - Effets de glassmorphisme
+    - Police Google Fonts (Inter)
+    - Design responsive (adaptation mobile)
+
+[✓] Expérience utilisateur améliorée
+    - Animations de pulsation sur les cibles
+    - Effet de rotation lors de la destruction
+    - Grille de fond sur le terrain
+    - Affichage des médailles dans le Hall of Fame
+    - Emojis pour indiquer la difficulté
+    - Messages de félicitations à la fin
+
+[✓] Code bien documenté
+    - Commentaires JSDoc pour toutes les fonctions
+    - Code commenté et organisé en sections
+    - Variables globales clairement définies
+    - Noms de fonctions explicites
+
+--------------------------------------------------------------------------------
+PROBLÈMES CONNUS
+--------------------------------------------------------------------------------
+
+Aucun problème majeur identifié. Le jeu fonctionne conformément au cahier
+des charges.
+
+Points d'attention :
+- Les positions aléatoires des cibles peuvent parfois se chevaucher
+- Le localStorage a une limite de stockage (généralement 5-10MB)
+
+--------------------------------------------------------------------------------
+STRUCTURE DES FICHIERS
+--------------------------------------------------------------------------------
+
+jsEvaluation/
+├── index.html                    (fichier HTML principal)
+├── style/
+│   └── style-project2018.css    (feuille de style)
+├── scripts/
+│   └── project2018.js           (logique du jeu)
+└── lisezmoi.txt                 (ce fichier)
+
+Tous les fichiers sont encodés en UTF-8.
+Tous les noms de fichiers sont en minuscules.
+
+--------------------------------------------------------------------------------
+INSTRUCTIONS D'UTILISATION
+--------------------------------------------------------------------------------
+
+1. Ouvrir le fichier index.html dans un navigateur web moderne
+   (Chrome, Firefox, Safari, Edge)
+
+2. Pour créer une seule cible :
+   - Cliquer sur le bouton "Une cible"
+   - Cliquer sur la cible pour la détruire
+
+3. Pour jouer une partie complète :
+   - Choisir le niveau de difficulté (Facile, Moyen, Difficile)
+   - Entrer le nombre de cibles souhaité (1-50)
+   - Cliquer sur "Démarrer"
+   - Cliquer sur toutes les cibles le plus rapidement possible
+   - Entrer votre nom pour enregistrer votre score
+
+4. Le Hall of Fame affiche automatiquement les 10 meilleurs scores
+
+--------------------------------------------------------------------------------
+TECHNOLOGIES UTILISÉES
+--------------------------------------------------------------------------------
+
+- HTML5 (structure sémantique)
+- CSS3 (animations, transitions, gradients, flexbox)
+- JavaScript ES6+ (DOM manipulation, localStorage, setInterval/setTimeout)
+- Google Fonts (Inter)
+
+Aucune bibliothèque externe n'a été utilisée (vanilla JavaScript).
+
+================================================================================
+FIN DU FICHIER
+================================================================================
